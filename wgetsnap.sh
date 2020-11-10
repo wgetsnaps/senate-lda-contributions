@@ -13,3 +13,6 @@ wget "${TARGET_URL}" \
       --recursive --level 1 \
       --span-hosts \
   | tee ./wget.log
+
+sed -e 's#\.\./\.\./#\./#g' legislative/Public_Disclosure/contributions_download.htm > index.html \
+    && rm -r legislative/
